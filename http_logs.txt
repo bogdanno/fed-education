@@ -1,0 +1,134 @@
+Запрос: https://api.github.com/repos/bogdanno/fed-education/issues
+
+{
+"title" : "first",
+"body" : "new item789 new new new"
+}
+
+Ответ: {
+  "url": "https://api.github.com/repos/bogdanno/fed-education/issues/9",
+  "repository_url": "https://api.github.com/repos/bogdanno/fed-education",
+  "labels_url": "https://api.github.com/repos/bogdanno/fed-education/issues/9/labels{/name}",
+  "comments_url": "https://api.github.com/repos/bogdanno/fed-education/issues/9/comments",
+  "events_url": "https://api.github.com/repos/bogdanno/fed-education/issues/9/events",
+  "html_url": "https://github.com/bogdanno/fed-education/issues/9",
+  "id": 219359671,
+  "number": 9,
+  "title": "first",
+  "user": {
+    "login": "bogdanno",
+    "id": 26869308,
+    "avatar_url": "https://avatars2.githubusercontent.com/u/26869308?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bogdanno",
+    "html_url": "https://github.com/bogdanno",
+    "followers_url": "https://api.github.com/users/bogdanno/followers",
+    "following_url": "https://api.github.com/users/bogdanno/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bogdanno/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bogdanno/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bogdanno/subscriptions",
+    "organizations_url": "https://api.github.com/users/bogdanno/orgs",
+    "repos_url": "https://api.github.com/users/bogdanno/repos",
+    "events_url": "https://api.github.com/users/bogdanno/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bogdanno/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-04T19:37:03Z",
+  "updated_at": "2017-04-04T19:37:03Z",
+  "closed_at": null,
+  "body": "new item789 new new new",
+  "closed_by": null
+}
+
+Запрос: https://api.github.com/repos/bogdanno/fed-education/issues
+
+{
+"title" : "second",
+"body" : "type"
+}
+
+Ответ: {
+  "url": "https://api.github.com/repos/bogdanno/fed-education/issues/10",
+  "repository_url": "https://api.github.com/repos/bogdanno/fed-education",
+  "labels_url": "https://api.github.com/repos/bogdanno/fed-education/issues/10/labels{/name}",
+  "comments_url": "https://api.github.com/repos/bogdanno/fed-education/issues/10/comments",
+  "events_url": "https://api.github.com/repos/bogdanno/fed-education/issues/10/events",
+  "html_url": "https://github.com/bogdanno/fed-education/issues/10",
+  "id": 219360142,
+  "number": 10,
+  "title": "second",
+  "user": {
+    "login": "bogdanno",
+    "id": 26869308,
+    "avatar_url": "https://avatars2.githubusercontent.com/u/26869308?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bogdanno",
+    "html_url": "https://github.com/bogdanno",
+    "followers_url": "https://api.github.com/users/bogdanno/followers",
+    "following_url": "https://api.github.com/users/bogdanno/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bogdanno/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bogdanno/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bogdanno/subscriptions",
+    "organizations_url": "https://api.github.com/users/bogdanno/orgs",
+    "repos_url": "https://api.github.com/users/bogdanno/repos",
+    "events_url": "https://api.github.com/users/bogdanno/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bogdanno/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-04T19:39:02Z",
+  "updated_at": "2017-04-04T19:39:02Z",
+  "closed_at": null,
+  "body": "type",
+  "closed_by": null
+}
+
+Запрос:https://api.github.com/repos/bogdanno/fed-education/issues/10/comments
+
+{
+"body" : "i think it is very beautiful"
+}
+
+Ответ: {
+  "url": "https://api.github.com/repos/bogdanno/fed-education/issues/comments/291610053",
+  "html_url": "https://github.com/bogdanno/fed-education/issues/10#issuecomment-291610053",
+  "issue_url": "https://api.github.com/repos/bogdanno/fed-education/issues/10",
+  "id": 291610053,
+  "user": {
+    "login": "bogdanno",
+    "id": 26869308,
+    "avatar_url": "https://avatars2.githubusercontent.com/u/26869308?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bogdanno",
+    "html_url": "https://github.com/bogdanno",
+    "followers_url": "https://api.github.com/users/bogdanno/followers",
+    "following_url": "https://api.github.com/users/bogdanno/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bogdanno/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bogdanno/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bogdanno/subscriptions",
+    "organizations_url": "https://api.github.com/users/bogdanno/orgs",
+    "repos_url": "https://api.github.com/users/bogdanno/repos",
+    "events_url": "https://api.github.com/users/bogdanno/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bogdanno/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created_at": "2017-04-04T19:41:28Z",
+  "updated_at": "2017-04-04T19:41:28Z",
+  "body": "i think it is very beautiful"
+}
