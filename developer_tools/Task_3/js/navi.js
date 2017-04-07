@@ -11,7 +11,7 @@ window.onload = function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
+            x.innerHTML = "Географическое положение не поддерживается";
         }
         function showPosition(position) {
             x.innerHTML = "Latitude: " + position.coords.latitude +
