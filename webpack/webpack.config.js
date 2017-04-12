@@ -1,10 +1,9 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin'),
-	CopyWebpackPlugin = require('copy-webpack-plugin'),
-	webpack 		  = require('webpack'),
-	path 			  = require('path'),
-	ExtractTextPlugin = require('extract-text-webpack-plugin'),
-	UglifyJSPlugin 	  = require('uglifyjs-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin'),
+	  CopyWebpackPlugin = require('copy-webpack-plugin'),
+	  webpack 		    = require('webpack'),
+	  path 			    = require('path'),
+	  ExtractTextPlugin = require('extract-text-webpack-plugin'),
+	  UglifyJSPlugin 	= require('uglifyjs-webpack-plugin');
 
 
 module.exports = {
@@ -23,27 +22,27 @@ module: {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
        loader: 'babel-loader',
-       options: {
+       query: {
       		presets: ['env']
    		}
         }
       ],
   },
 module: {
-    loaders: [
+    rules: [
       {
-        test: /\.scss$/,
+        test: /\.sass|scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use:['css-loader', 'sass-loader'],
-          publicPath: 'build'
+          publicPath: './build'
         })
-      },
+      }
     ]
   },
 
 	plugins: [
-	new webpack.optimize.CommonsChunkPlugin({name:'vendor',filename:'vendor.js'}),
+	new webpack.optimize.CommonsChunkPlugin({name:'vendor'}),
 	new UglifyJSPlugin(),
 	new HtmlWebpackPlugin({
 		template: './build/index.html',
@@ -53,6 +52,6 @@ module: {
 	{
 		copyUnmodified: true
 	}),
-	new ExtractTextPlugin({filename:"app.css"})
+	new ExtractTextPlugin('app.css')
 ]
 };
