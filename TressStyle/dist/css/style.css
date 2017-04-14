@@ -1,0 +1,111 @@
+header {
+  height: 150px;
+}
+
+.main {
+  min-width: 1030px;
+}
+
+#img-logo {
+  width: 250px;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 250px;
+  height: 150px;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.nav {
+  height: 50px;
+}
+
+.nav li {
+  list-style-type: none;
+  float: right;
+  padding: 10px;
+}
+
+.nav li a {
+  text-decoration: none;
+}
+
+.interier {
+  position: absolute;
+  display: none;
+}
+
+.block-hover a {
+  display: block;
+  margin-left: 0 !important;
+}
+
+.block-hover a:hover {
+  color: #000;
+  background-color: #fcf;
+}
+
+.block-hover:hover .interier {
+  display: block;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+}
+
+.block-hover:hover .interier li:nth-child(-n+22) {
+  float: left;
+  list-style-type: none;
+}
+
+.form-list {
+  float: left;
+  margin-top: 15px;
+}
+
+.container {
+  display: block;
+  width: 980px;
+  margin: auto;
+}
+
+.catalogy {
+  padding: 0;
+  margin-left: 200px;
+}
+
+.catalogy li:nth-child(-n+4) {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  margin-right: 40px;
+}
+
+.catalogy li a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  background-color: gray;
+  color: gray;
+  height: 2px;
+}
+
+.block-list {
+  margin: 50px 0 0 50px;
+  height: 200px;
+  width: 260px;
+  background: pink;
+  display: inline-block;
+  color: white;
+  float: left;
+}
+
+.block-img {
+  height: 200px;
+  width: 260px;
+}
