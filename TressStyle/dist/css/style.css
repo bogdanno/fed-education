@@ -77,14 +77,14 @@ header {
   margin-left: 200px;
 }
 
-.catalogy li:nth-child(-n+4) {
+.catalogy .block-hover:nth-child(-n+4) {
   float: left;
   text-align: center;
   list-style-type: none;
   margin-right: 40px;
 }
 
-.catalogy li a {
+.catalogy .block-hover a {
   text-decoration: none;
 }
 
@@ -95,13 +95,11 @@ hr {
   height: 2px;
 }
 
-.block-list {
+.block-post {
   margin: 50px 0 0 50px;
   height: 200px;
   width: 260px;
-  background: pink;
   display: inline-block;
-  color: white;
   float: left;
 }
 
