@@ -16,6 +16,10 @@ module.exports = {
 		sourceMapFilename: '[name].map'
 	},
 
+devServer: {
+	host: '0.0.0.0'
+},
+
 module: {
     loaders: [
       {

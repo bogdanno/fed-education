@@ -1,8 +1,11 @@
 import _ from 'lodash';
-// import $ from 'jquery';
+import $ from 'jquery';
 import * as header from './components/header';
 import * as content from './components/content';
 import * as footer from './components/footer';
+import * as menu from './components/menu';
+import '../styles/app.scss';
+
 
 header.init();
 menu.init();
