@@ -1,9 +1,23 @@
-header {
-  height: 150px;
+body {
+  font-size: 14px;
+  margin: 0;
 }
 
-.main {
+main, footer, section {
   min-width: 1030px;
+}
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.category-block-post {
+  display: block;
+  height: auto;
 }
 
 #img-logo {
@@ -39,37 +53,43 @@ header {
   display: none;
 }
 
-.block-hover a {
+.block-hover .a-category {
   display: block;
+  padding: 5px;
   margin-left: 0 !important;
 }
 
-.block-hover a:hover {
+.block-hover .a-category:hover {
   color: #000;
-  background-color: #fcf;
+  background-color: lightgray;
 }
 
 .block-hover:hover .interier {
   display: block;
-  width: 250px;
-  height: 200px;
+  width: 200px;
   background-color: white;
 }
 
-.block-hover:hover .interier li:nth-child(-n+22) {
+.block-hover:hover .interier li {
+  width: 200px;
   float: left;
   list-style-type: none;
+  padding: 5px;
+  text-align: left;
+}
+
+.block-hover:hover .interier li a {
+  display: block;
+  margin-left: 0 !important;
+}
+
+.block-hover:hover .interier li a:hover {
+  color: red;
 }
 
 .form-list {
   float: left;
   margin-top: 15px;
-}
-
-.container {
-  display: block;
-  width: 980px;
-  margin: auto;
 }
 
 .catalogy {
@@ -95,15 +115,37 @@ hr {
   height: 2px;
 }
 
+.op {
+  float: left;
+}
+
+.border-block {
+  display: inline-block;
+  border: 1px solid gray;
+  width: 280px;
+  height: 290px;
+  margin: 50px 0 0 30px;
+}
+
 .block-post {
-  margin: 50px 0 0 50px;
+  padding: 10px 0 0 10px;
   height: 200px;
   width: 260px;
-  display: inline-block;
-  float: left;
 }
 
 .block-img {
   height: 200px;
   width: 260px;
+}
+
+.text-block {
+  color: gray;
+  text-align: center;
+}
+
+.footer {
+  height: 30px;
+  margin: 30px 0 0 0;
+  background-color: lightgray;
+  text-align: center;
 }

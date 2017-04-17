@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     livereload = require('gulp-livereload');
 
-gulp.task('default', ['img', 'sass', 'webserver']);
+gulp.task('default', ['img','webserver', 'watch']);
 
 const params = {
     out: 'dist/',
@@ -21,6 +21,19 @@ gulp.task('webserver', function() {
         }));
 });
 
+// gulp.task('watch', ['sass'], function() {
+
+//     browserSync.init({
+//         server: {
+//             baseDir: "./dist"
+//         },
+//         notify: false
+//     });
+
+//     gulp.watch(['sass/**/*.sass', 'sass/**/*.scss'], ['sass']);
+//     gulp.watch("*.html").on('change', reload);
+// });
+
 gulp.task('sass', function() {
     return gulp.src(params['stylesSass'])
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -32,8 +45,9 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('watch', function() {
-    gulp.watch(['sass/**/*.sass', 'sass/**/*.scss'], ['sass']);
+gulp.task('watch',['sass'], function() {
+    gulp.watch(['app/**/*.sass', 'app/**/*.scss'], ['sass']);
+
 });
 
 // gulp.task('server', function() {
