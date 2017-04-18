@@ -28,11 +28,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('app/img/*.+(png|ico|jpeg|jpg)')
+    return gulp.src('app/img/**/*.+(png|ico|jpeg|jpg)')
         .pipe(gulp.dest('dist/img'))
 });
 
 gulp.task('watch',['sass'], function() {
     gulp.watch(['app/**/*.sass', 'app/**/*.scss'], ['sass']);
-    gulp.watch(['app/img/*.+(png|ico|jpeg|jpg)'],['img']);
+    gulp.watch(['app/img/**/*.+(png|ico|jpeg|jpg)'],['img']);
 });

@@ -10,35 +10,65 @@
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <form class="form-list">
+                <p>
+                    <input type="search" name="q" placeholder="Поиск по сайту">
+                    <input type="submit" value="Найти">
+                </p>
+            </form>
+            <nav class="navbar-right">
+                <ul class="nav">
+                    <li><a href="" >
+                        <div onclick="show('block')" class="icon-attr" data-title="ВХОД">
+                            <img class="icon" src="img/icon/login.png">
+                        </div>
+                        </a>
+                    </li> 
+                        
+                    <div class="popup_window" id="box">
+                        <div class="border-block-popup">
+                            <div class="popup" id="box-two">
+                                <div onclick="show('none')" class="close"> X </div>
+                                    <p class="popup_avtorization">АВТОРИЗАЦИЯ</p>
+                                         <form class="avtorization_form">
+                                            <p><input name="user" autocomplete="on" placeholder="Имя"></p>
+                                            <p><input name="pass" type="password" placeholder="Пароль"></p>
+                                        </form>
+                            </div>
+                                <p class="ok">ОК</p>
+                                <p class="otmena" onclick="show('none')"> ОТМЕНА </p>
+                        </div>
+                    </div>
 
-        <header>
-            <div class="container">
-                <form class="form-list">
-                    <p>
-                        <input type="search" name="q" placeholder="Поиск по сайту">
-                        <input type="submit" value="Найти">
-                    </p>
-                </form>
-                <nav class="navbar-right">
-                    <ul class="nav">
-                        <li><a href="">Войти</a></li>
-                        <li><a href="">Корзина</a></li>
-                        <li><a href="">Избранное</a></li>
-                    </ul>
-                </nav>
-                <div id="img-logo">
-                    <img id="logo" src="img/logo.jpg">
-                </div>
+                    <li><a href="" >
+                        <div class="icon-attr" data-title="КОРЗИНА">
+                            <img class="icon" src="img/icon/shopping-basket.png">
+                        </div>
+                        </a>
+                    </li>
+                    <li><a href="">
+                        <div class="icon-attr" data-title="ИЗБРАННОЕ">
+                            <img class="icon" src="img/icon/favorite.png">
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="img-logo">
+                <img id="logo" src="img/logo.jpg">
             </div>
-        </header>
-    <hr>
+        </div>
+    </header>
+<hr>
 
 <main>
-         <section>
-            <nav class="container">
-                <ul class="catalogy">
-                    <li class="block-hover">
-                        <a class="a-category" data-toggle="dropdown" href="">ГОСТИНАЯ</a>
+    <section>
+        <nav class="container">
+            <ul class="catalogy">
+                <li class="block-hover">
+                    <a class="a-category" data-toggle="dropdown" href="">ГОСТИНАЯ</a>
                         <ul class="interier">
                             <li><a href="">Для прихожей</a></li>
                             <li class="block-hover-min"><a href="">Вазы и флористика</a>
@@ -55,9 +85,9 @@
                             <li><a href="">Декоративная мебель</a></li>
                             <li><a href="">Освещение дома</a></li>
                         </ul>
-                    </li>
-                    <li class="block-hover">
-                        <a class="a-category" href="">ВАННАЯ КОМНАТА</a>
+                </li>
+                <li class="block-hover">
+                    <a class="a-category" href="">ВАННАЯ КОМНАТА</a>
                         <ul class="interier">
                             <li class="block-hover-min"><a href="">Аксессуары для ванной</a>
                                 <ul class="min-nav">
@@ -71,12 +101,12 @@
                             <li><a href="">Декор для ванной</a></li>
                             <li><a href="">Аксессуары для туалета</a></li>
                         </ul>
-                    </li>
-                    <li class="block-hover">
+                </li>
+                <li class="block-hover">
                         <a class="a-category" href="">ДЕТСКАЯ</a></li>
-                    <li class="block-hover">
+                <li class="block-hover">
                         <a class="a-category" href="">КУХНЯ</a></li>
-                    <li class="block-hover">
+                <li class="block-hover">
                         <a class="a-category" href="">СПАЛЬНЯ</a>
                          <ul class="interier">
                             <li><a href="">Вазы и флористика</a></li>
@@ -84,28 +114,28 @@
                             <li><a href="">Освещение дома</a></li>
                             <li><a href="">Декор для дома</a></li>
                         </ul>
-                    </li>
-                </ul>
-            </nav>
-        </section> 
+                </li>
+            </ul>
+        </nav>
+    </section> 
 
-<section>
-    <div class="container">
+    <section>
+        <div class="container">
             <div class="category-block-post">
                 <div class="op">
-                <div class="border-block">
-                    <a href="">
-                        <div class="opacity">
-                            <div class="block-post">
-                                <img class="block-img" src="img/vaza.jpg">
+                    <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p>ВАЗЫ И ФЛОРИСТИКА</p>
+                                    <p>(456)</p>
+                                </div>
                             </div>
-                            <div class="text-block">
-                                <p>ВАЗЫ И ФЛОРИСТИКА</p>
-                                <p>(456)</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="border-block">
@@ -134,7 +164,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="border-block">
                     <a href="">
                         <div class="opacity">
@@ -145,11 +174,10 @@
                                 <p>СЕРВИЗЫ</p>
                                 <p>(579)</p>
                             </div>
-                    </div>
+                        </div>
                     </a>
                 </div>
-
-                <div class="border-block">
+                 <div class="border-block">
                     <a href="">
                         <div class="opacity">
                             <div class="block-post">
@@ -159,10 +187,9 @@
                                 <p>КОРЗИНЫ</p>
                                 <p>(27)</p>
                             </div>
-                            </div>
+                        </div>
                     </a>
                 </div>
-
                 <div class="border-block">
                     <a href="">
                         <div class="opacity">
@@ -173,12 +200,12 @@
                                 <p>ЧАСЫ,КАРТИНЫ</p>
                                 <p>(345)</p>
                             </div>
-                            </div>
+                        </div>
                     </a>
                 </div>
+            </div>
         </div>
-    </div>
-</section> 
+    </section> 
 </main>
  <footer> 
     <section class="container">
@@ -187,5 +214,13 @@
         </div>
     </section>
 </footer>
+
+ <script>
+    function show(state) {
+    document.getElementById('box').style.display = state;
+    document.getElementById('box-two').style.display = state;
+}
+</script>
+
 </body>
 </html>
