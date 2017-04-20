@@ -1,0 +1,280 @@
+//import
+@import 'category.sass';
+@import 'flexbox.sass';
+
+// colors
+$standart-color: #755846;
+$backgr-popup: #FFF4E1;
+$white: #fff;
+
+
+// fonts
+$serif:  Georgia, "Lora", "Playfair Display", serif;
+$sans-serif: "Roboto", "Source Sans Pro", "Open Sans", Arial, sans-serif;
+$monospace: "Inconsolata", monospace;
+$size: 14px;
+
+body 
+    font-size: $size;
+    margin: 0;
+    font-family: $sans-serif,$serif,$monospace;
+
+header,section,main
+    min-width: 73%;
+
+.icon 
+    width: 30px;
+
+.icon-attr 
+    &:hover
+        &::after
+            content: attr(data-title)
+            position: absolute;
+            z-index: 10
+            font-size: 10px
+
+.container 
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+.img-logo 
+    width: 30%;  
+    margin: 0 auto;
+
+.logo 
+    width: 100%;
+    height: auto;
+
+.nav 
+    float: right;
+
+.nav-right 
+    height: 50px;
+
+    li 
+        list-style-type: none;
+        float: right;
+        padding: 10px;
+    
+        a 
+            text-decoration: none;
+
+.interier 
+        position: absolute;
+        display: none;
+
+.catalogy 
+    padding-left: 20px; 
+    height: 30px;
+
+    &__block-hover
+        &:nth-child(-n+6)
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        margin-right: 40px; 
+
+    &__a-category 
+        display: block;
+        padding: 5px;
+        margin-left: 0 !important;
+        text-decoration: none;
+
+        &:hover 
+            color: $standart-color;
+                
+            
+        &:hover 
+            .interier
+                z-index: 15;
+                padding: 5px;
+                display: block;
+                width: 210px;
+                background-color: $white;
+
+                li
+                    width: 200px;
+                    float: left;
+                    list-style-type: none;
+                    padding: 5px;
+                    text-align: left;
+
+                    a
+                        display: block;
+                        margin-left: 0 !important;
+
+                        &:hover 
+                            color: $standart-color;
+                        
+.min-nav
+    position: absolute; 
+    display: none;
+
+.block-hover-min 
+     &:hover 
+        .min-nav
+            z-index: 20;
+            margin-left: 160px;
+            padding: 5px;
+            display: block;
+            width: 210px;
+            background-color: lightgray;
+
+            li
+                width: 200px;
+                float: left;
+                list-style-type: none;
+                padding: 5px;
+                text-align: left;
+
+                a
+                    display: block;
+                    margin-left: 0 !important;
+
+                    &:hover 
+                        color: $standart-color;
+
+.search-form 
+    float: left;
+    margin-top: 20px; 
+
+
+
+
+
+
+hr 
+    border: none;
+    background-color: gray;
+    color: gray;
+    height: 2px;
+
+.category-block-post
+    display: block;
+    height: auto;
+    
+ 
+.op 
+    float:  left;
+
+.border-block
+    display: inline-block;
+    border: 1px solid gray;
+    width: 280px;
+    height: 290px;
+    margin: 20px 0 0 30px;
+
+    a
+        text-decoration: none;
+
+        .text-block
+                color: $standart-color;
+
+.opacity 
+    opacity: 0.8;
+
+    &:hover 
+        opacity: 1;
+
+.block-post
+    
+    padding: 10px 0 0 10px;
+    height: 200px;
+    width: 260px;    
+
+.block-img
+    height: 200px;
+    width: 260px;
+
+.text-block 
+    color: gray;
+    text-align: center;
+
+.footer
+    height: 30px;
+    margin: 30px 0 0 0;
+    border: 1px gray solid;
+    text-align: center;
+
+.popup_window 
+    display: none;
+    width: 100%; 
+    min-height: 100%; 
+    background-color: rgba(0,0,0,0.7); 
+    overflow: hidden; 
+    position: fixed; 
+    top: 0px; 
+    z-index: 100;
+    font-family: Arial;
+    left: 0;
+
+.border-block-popup
+    border: 1px solid $white;
+    width: 450px;
+    height: 340px;
+    margin: 40px auto 0px auto;
+
+.popup 
+    padding: 5px;
+    width: 400px; 
+    height: 250px; 
+    margin: 20px 0 0 20px;
+    background-color: $white; 
+    // box-shadow: 0px 0px 10px #000;
+
+.close
+    float: right;
+    top: 0px;
+    cursor: pointer;
+
+.popup_avtorization 
+    text-align: center;
+
+.otmena 
+    float: right;
+    cursor: pointer;
+    color: $white;
+    //text-align: right;
+    margin-right: 150px;
+
+    &:hover 
+        background-color: $white;
+        color: $standart-color;
+
+.ok
+    float: left;
+    cursor: pointer;
+    color: $white;
+    //text-align: right;
+    margin-left: 170px;
+
+    &:hover 
+        background-color: $white;
+        color: $standart-color;   
+
+.avtorization_form
+    margin: 60px calc(50% - 70px) 0px calc(50% - 70px);
+
+.flex-container 
+    padding: 10px;
+    background: $standart-color;
+
+.flex-element
+    width: 150px;
+    color: #fff;
+    padding: 15px;
+    margin: 5px;
+    background: firebrick;
+
+
+
+
+
+
+
+
+   
+
