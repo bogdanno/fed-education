@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,132 +9,317 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="container">
-            <form class="search-form">
+<body class="page">
+    <header class="header container">
+        <!--<div class="flexbox">-->
+            <form class="header__search-form search-form">
                 <div class="search-form__content">
                     <input class="search-form__input" type="search" name="q" placeholder="Поиск по сайту">
                     <input class="search-form__button" type="submit" value="Найти">
                 </div>
             </form>
-            <nav class="nav">
-                <ul class="nav-right">
-                    <li class="nav-li">
-                        <div onclick="show('block')" class="icon-attr" data-title="ВХОД">
+
+            <div class="header__img-logo img-logo">
+                <a href="index.html"><img class="logo" src="img/logo.jpg"></a>
+            </div>
+
+            
+            <nav class="header__nav nav">
+                <ul class="nav__navigation navigation">
+                    <li class="navigation__navigation-link navigation-link">
+                        <div onclick="show('flex')" class="navigation-link__icon-abbr icon-abbr" data-title="ВХОД">
                             <img class="icon" src="img/icon/login.png">
                         </div>
                     </li> 
                         
-                    <div class="popup_window" id="box">
-                        <div class="border-block-popup">
+                    <div class="window" id="box">
+                        <div class="popup-block">
                             <div class="popup" id="box-two">
-                                <div onclick="show('none')" class="close"> X </div>
-                                    <p class="popup_avtorization">АВТОРИЗАЦИЯ</p>
-                                         <form class="avtorization_form">
-                                            <p><input name="user" autocomplete="on" placeholder="Имя"></p>
-                                            <p><input name="pass" type="password" placeholder="Пароль"></p>
-                                        </form>
+                                    <!--<div onclick="show('none')" class="close"> X </div>-->
+                                    <div class="popup__authorization"><p>авторизация</p></div>
+                                    <form class="popup__authorization-form authorization-form">
+                                        <p><input class="authorization-form__user" name="popup__user" placeholder="Имя"></p>
+                                        <p><input class="authorization-form__pass" name="popup__pass" type="password" placeholder="Пароль"></p>
+                                        <p><input type="checkbox"> Запомнить меня</p>
+                                    </form>
                             </div>
-                                <p class="ok">ОК</p>
-                                <p class="otmena" onclick="show('none')"> ОТМЕНА </p>
+                            <p class="popup-block__ok">ОК</p>
+                            <p class="popup-block__cancel" onclick="show('none')"> ОТМЕНА </p>
                         </div>
                     </div>
 
-                    <li><a class="nav-a" href="" >
-                        <div class="icon-attr" data-title="КОРЗИНА">
+                    <li class="navigation__navigation-link navigation-link">
+                        <a class="navigation__nav-a" href="" >
+                        <div class="navigation-link__icon-abbr icon-abbr" data-title="корзина">
                             <img class="icon" src="img/icon/shopping-basket.png">
                         </div>
                         </a>
                     </li>
-                    <li><a class="nav-a" href="">
-                        <div class="icon-attr" data-title="ИЗБРАННОЕ">
+                    <li class="navigation__navigation-link navigation-link">
+                        <a class="navigation__nav-a" href="">
+                        <div class="navigation-link__icon-abbr icon-abbr" data-title="избранное">
                             <img class="icon" src="img/icon/favorite.png">
+                        </div>
+                        </a>
+                    </li>
+                    <li class="navigation__navigation-link navigation-link search">
+                        <a class="navigation__nav-a" href="">
+                        <div class="navigation-link__icon-abbr icon-abbr" data-title="поиск">
+                            <img class="icon" src="img/icon/search.png">
                         </div>
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="img-logo">
-                <a href="index.html"><img class="logo" src="img/logo.jpg"></a>
-            </div>
         </div>
     </header>
-<hr>
 
-<main>
-    <section>
-        <nav class="container">
-            <ul class="catalogy">
-                <li class="catalogy__block-hover">
-                    <a class="catalogy__a-category" href="">ГОСТИНАЯ</a>
-                        <!-- <ul class="interier">
+
+<main class="page__main">
+<hr>
+    <section class="page__section section container">
+        <nav class="section__container">
+            <ul class="container__navigation navigation">
+                <li class="navigation__link link home">
+                        <a class="link__a-category" href="index.html">главная</a>
+                </li>
+                <li class="navigation__link link">
+                    <a class="link__a-category" href="">гостинная</a>
+                        <ul class="interier">
                             <li><a href="">Для прихожей</a></li>
                             <li class="block-hover-min"><a href="">Вазы и флористика</a>
-                                 <ul class="min-nav">
+                                <!--  <ul class="min-nav">
                                     <li><a href="">Вазы для цветов</a></li>
                                     <li><a href="">Напольные и высокие вазы</a></li>
                                     <li><a href="">Искуственные цветы и растения</a></li>
                                     <li><a href="">Кашпо и горшки для цветов</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li><a href="">Домашний текстиль</a></li>
                             <li><a href="">Декор для дома</a></li>
                             <li><a href="">Декорирование стен</a></li>
                             <li><a href="">Декоративная мебель</a></li>
                             <li><a href="category.html">Освещение дома</a></li>
-                        </ul> -->
+                        </ul>
                 </li>
-                <li class="catalogy__block-hover">
-                    <a class="catalogy__a-category" href="">ВАННАЯ КОМНАТА</a>
-                        <!-- <ul class="interier">
+                <li class="navigation__link link">
+                    <a class="link__a-category" href="">ванная комната</a>
+                        <ul class="interier">
                             <li class="block-hover-min"><a href="">Аксессуары для ванной</a>
-                                <ul class="min-nav">
+                                <!-- <ul class="min-nav">
                                     <li><a href="">Дозатор для мыла</a></li>
                                     <li><a href="">Стаканы для зубных щеток</a></li>
                                     <li><a href="">Мыльницы для ванной</a></li>
                                     <li><a href="">Аксессуары для ванной</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li><a href="">Домашний текстиль</a></li>
                             <li><a href="">Декор для ванной</a></li>
                             <li><a href="">Аксессуары для туалета</a></li>
-                        </ul> -->
+                        </ul>
                 </li>
-                <li class="catalogy__block-hover">
-                        <a class="catalogy__a-category" href="">ДЕТСКАЯ</a></li>
-                <li class="catalogy__block-hover">
-                        <a class="catalogy__a-category" href="">КУХНЯ</a></li>
-                <li class="catalogy__block-hover">
-                        <a class="catalogy__a-category" href="">СПАЛЬНЯ</a>
-                         <!-- <ul class="interier">
+                <li class="navigation__link link">
+                        <a class="link__a-category" href="">детская</a></li>
+                <li class="navigation__link link">
+                        <a class="link__a-category" href="">кухня</a></li>
+                <li class="navigation__link link">
+                        <a class="link__a-category" href="">спальня</a>
+                         <ul class="interier">
                             <li><a href="">Вазы и флористика</a></li>
                             <li><a href="">Текстиль</a></li>
                             <li><a href="">Освещение дома</a></li>
                             <li><a href="">Декор для дома</a></li>
-                        </ul> -->
+                        </ul>
                 </li>
             </ul>
         </nav>
     </section> 
-
+<hr>
 
     <section>
         <div class="container">
-            <div class="category-block-post">
+            <div class="category-block">
                 <div class="flex-container">
-                    <div class="flex-element">1</div>
-                    <div class="flex-element">2</div>
-                    <div class="flex-element">3</div>
-                    <div class="flex-element">4</div>
-                    <div class="flex-element">5</div>
-                    <div class="flex-element">6</div>
-                    <div class="flex-element">7</div>
-                    <div class="flex-element">8</div>
-                    <div class="flex-element">9</div>
-                    <div class="flex-element">10</div>
-                    <div class="flex-element">11</div>
-                    <div class="flex-element">12</div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/stena.jpg">
+                            </div>
+                            <div class="text-block">
+                                <p class="text-block__uppercase">декорирование стен</p>
+                                <p>(156)</p>
+                            </div>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                       <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/stena.jpg">
+                            </div>
+                            <div class="text-block">
+                                <p class="text-block__uppercase">декорирование стен</p>
+                                <p>(156)</p>
+                            </div>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/i.jpeg">
+                            </div>
+                            <div class="text-block">
+                                 <p class="text-block__uppercase">часы и картины</p>
+                                <p>(345)</p>
+                            </div>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/stena.jpg">
+                            </div>
+                            <div class="text-block">
+                                <p class="text-block__uppercase">декорирование стен</p>
+                                <p>(156)</p>
+                            </div>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                         <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/i.jpeg">
+                            </div>
+                            <div class="text-block">
+                                 <p class="text-block__uppercase">часы и картины</p>
+                                <p>(345)</p>
+                            </div>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="flex-element">
+                        <div class="border-block">
+                        <a href="">
+                            <div class="opacity">
+                                <div class="block-post">
+                                    <img class="block-img" src="img/vaza.jpg">
+                                </div>
+                                <div class="text-block">
+                                    <p class="text-block__uppercase">вазы и флористика</p>
+                                    <p>(456)</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                   <div class="flex-element">
+                        <div class="border-block">
+                         <a href="">
+                        <div class="opacity">
+                            <div class="block-post">
+                                <img class="block-img" src="img/i.jpeg">
+                            </div>
+                            <div class="text-block">
+                                 <p class="text-block__uppercase">часы и картины</p>
+                                <p>(345)</p>
+                            </div>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- <div class="op">
@@ -211,7 +397,7 @@
                                 <img class="block-img" src="img/i.jpeg">
                             </div>
                             <div class="text-block">
-                                <p>ЧАСЫ,КАРТИНЫ</p>
+                                <p>часы и картины</p>
                                 <p>(345)</p>
                             </div>
                         </div>
@@ -224,7 +410,15 @@
  <footer> 
     <section class="container">
         <div class="footer">
-            <p>ЛИЗА @ БОГДАНОВА</p>
+            <div class="footer__elements">
+                <p class="footer__uppercase">лиза богданова</p>
+            </div>
+            <div class="footer__elements">
+                <p class="footer__uppercase">@</p>
+            </div>
+            <div class="footer__elements">
+                <p class="footer__uppercase">ЭПАМ</p>
+            </div>
         </div>
     </section>
 </footer>

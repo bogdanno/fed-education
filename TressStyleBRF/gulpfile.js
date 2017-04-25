@@ -17,8 +17,8 @@ gulp.task('webserver', function() {
     gulp.src('dist')
         .pipe(webserver({
             livereload: true,
-            host: '0.0.0.0',
-            open: true
+            open: true,
+            host: '0.0.0.0'
         }));
 });
 
