@@ -4,7 +4,7 @@ document.write('17.Кавычки в тексте<br/>');
 //17 задание
 var stringDialog = 'Woman: \'So, what\'s your usual day like? You always seem so busy.\'  Man: \'Well, I usually get up around 5:00 a.m. and work on the computer until 6:00 a.m.\' Woman: \'Why do you get up so early?\'  Man: \'Well, I have to leave home at twenty to seven (6:40 a.m.) so I can catch a bus at 7:00 o\'clock . It takes me about twenty minutes to walk to the bus stop from my house.\'  Woman: \'And what time do you get to work?\'  Man: \'Uh, my bus takes about an hour to get there, but it stops right in front of my office.\' Woman: \'That\'s nice. And what time do you get off work?\'';
 
-document.write(stringDialog.replace(/(\W\')|(\W\')\B/g,"\""));
+document.write(stringDialog.replace(/(\s\')|([.?!]\')/g,"\""));
 
 document.write("<br/>");
 document.write("<br/>");

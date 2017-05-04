@@ -1,7 +1,7 @@
 document.write('1.Треугольник');
  //треугольник
- for(var i=0;i<8;i++) {
-    for(var j=0;j<i;j++) {
+ for(var i = 0; i < 8; i++) {
+    for(var j = 0; j < i; j++) {
             document.write('#');
     }
     document.write('<br/>');
@@ -42,35 +42,6 @@ document.write(min(23,45));
 // document.write(min('hi','buy'));
 // document.write(min('hi','3'));
 // document.write(min(5,'hi'));
-
-document.write('<br/>');
-document.write('<br/>');
-document.write('6.Считаем бобы<br/>');
-//бобы
-function countBs(stringB) {
-	var length = stringB.length;
-	var count = 0;
-	for(i=0; i<length; i++) {
-		var c = stringB.charAt(i)
-		if(c=="B")
-		count++;	
-	}
-	return count;
-}
-document.write(countBs("Hi BoB!"));
-document.write('<br/>');
-//бобы - второй символ
-function countBs(stringC, c) {
-	var length = stringC.length;
-	var count = 0;
-	for(i=0; i<length; i++) {
-		var simbol = stringC.charAt(i)
-		if(simbol==c)
-		count++;
-	}
-	return count;
-}
-document.write(countBs("Hi BoB!", "H"));
 
 document.write('<br/>');
 document.write('<br/>');
