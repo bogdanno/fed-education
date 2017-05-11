@@ -144,7 +144,7 @@ function Wall() {};
 // var world = new World(plan, {"#": Wall, "o": BouncingCritter});
 // console.log(world.toString());
 
-//вызов каждого элементы решетки
+//вызов каждого элемента сетки
 Grid.prototype.forEach = function(f, context) {
 	for(var y = 0; y < this.height; y++) {
 		for(var x=0; x < this.width; x++) {

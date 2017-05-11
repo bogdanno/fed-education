@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GAME2</title>
+</head> 
+
+<body>
+<button onclick="gameRun()">Начать игру</button>
+<div id="data"></div>
+<script>
+function gameRun() {
+	var grid = ["o###########################",
+            	"#      #    #      o      ##",
+            	"#                      **  #",
+            	"#      *   #####           #",
+            	"##         #   #    ##     #",
+            	"###  *        ##     #     #",
+            	"#           ###   *  #     #",
+            	"#   ####                   #",
+            	"#   ##   *** o             #",
+            	"# o  #         o       ### #",
+            	"#    #           *         #",
+            	"############################"];
+
+	var world = new World(grid);
+	world.start();
+}
+function World(grid) {
+	var gridArr = createGrid(grid);
+	this.grid = gridArr;
+}
+World.prototype.start =  function() {
+	while (true) {
+		this.grid = makeStep(this.grid);
+		showPlayingField(this.grid);
+	}
+}
+
+function makeStep(grid) {
+	for(var i=0 ; i < grid.length; i++) {
+		for(var j=0; j < grid[0].length; j++){
+			if(grid[i][j]!==null)
+			grid[i][j].makeAction();
+		}
+	}
+} 
+function Vector(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Vector.prototype.changeCoordinates = function(other) {
+ 	this.x = other.x;
+ 	this.y = other.y;
+};
+
+function Herbivores(x, y) {
+	this.symbol = "o";
+	this.vector = new Vector(x,y);
+}
+Herbivores.prototype.makeAction = function () {
+	var moveSpace =  this.find();
+	this.vector.changeCoordinates(moveSpace);
+}
+Herbivores.prototype.find = function () {
+	var grassHere = this.findGrass();
+	if(grassHere !== null) {
+		return grassHere;
+	}
+	return findSpace();
+}
+Herbivores.prototype.findGrass = function() {
+	for(var i=this.vector.x-1; i < this.vector.x+1; i++) {
+		for(var j=this.vector.y-1; j < this.vector.y+1; j++) {
+			if(typeof(this.grid[i][j]) === "Grass") {
+				return new Vector(i,j);
+			}
+		}
+	}
+	return null; 
+} 
+Herbivores.prototype.findSpace = function() {
+	var mass = [];
+	for(var i=this.vector.x-1; i < this.vector.x+1; i++) {
+		for(var j=this.vector.y-1; j < this.vector.y+1; j++) {
+			if(grid[i][j] === null) {
+				mass.push(new Vector(i,j));
+			}
+
+		}
+	}
+	if(mass.length === 0) {
+		return this.vector;
+	}
+	else {
+		return randomElement(mass);
+	}
+}
+function randomElement(array) {
+		return array[Math.floor(Math.random() * array.length)];
+		}
+
+function Stone() {
+	this.symbol = "#";
+}
+
+function Grass() {
+	this.symbol = "*";
+}
+
+function createGrid(grid) {
+	var arrayGrid = new Array();
+	for(var i=0 ; i < grid.length; i++) {
+		arrayGrid[i]=[]; 
+		for(var j=0; j < grid[0].length; j++){
+			if(grid[i][j] === "#") {
+				var stone = new Stone();
+				arrayGrid[i][j]=stone;
+			}
+			else if(grid[i][j] === " ") {
+				arrayGrid[i][j] = null;
+			}
+			else if(grid[i][j] === "*") {
+				var grass = new Grass();
+				arrayGrid[i][j] = grass;
+			}
+			else if(grid[i][j] === "o") {
+				var herbivores = new Herbivores(i,j);
+				arrayGrid[i][j] = herbivores;
+			}
+			else {
+				
+			}
+		}
+	}
+	return arrayGrid;  
+}
+
+function showPlayingField(grid) {
+	var str = [,];
+	for(var i=0 ; i < grid.length; i++) {
+		for(var j=0; j < grid[0].length; j++){
+			if(grid[i][j] === null) {
+			str[i][j] = " ";
+			}
+			str[i][j] = grid[i][j].symbol;
+		}
+	}
+	var dataElem = document.getElementById('data');
+	dataElem.innerHTML = str;
+
+}
+
+</script>
+
+</body>
+</html>
