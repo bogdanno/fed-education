@@ -13,7 +13,7 @@
 <div id="data"></div>
 <script>
 function gameRun() {
-	var grid = ["o###########################",
+	var grid = ["############################",
             	"#      #    #      o      ##",
             	"#                      **  #",
             	"#      *   #####           #",
@@ -31,10 +31,13 @@ function gameRun() {
 }
 function World(grid) {
 	var gridArr = createGrid(grid);
+	this.view = new View(gridArr);
 	this.grid = gridArr;
 }
 World.prototype.start =  function() {
 	while (true) {
+		var view = new View(this.grid);
+		view.setArea();
 		this.grid = makeStep(this.grid);
 		showPlayingField(this.grid);
 	}
@@ -61,6 +64,9 @@ function Herbivores(x, y) {
 	this.symbol = "o";
 	this.vector = new Vector(x,y);
 }
+Herbivores.prototype.area = function (area) {
+	this.area = area;
+}
 Herbivores.prototype.makeAction = function () {
 	var moveSpace =  this.find();
 	this.vector.changeCoordinates(moveSpace);
@@ -75,7 +81,7 @@ Herbivores.prototype.find = function () {
 Herbivores.prototype.findGrass = function() {
 	for(var i=this.vector.x-1; i < this.vector.x+1; i++) {
 		for(var j=this.vector.y-1; j < this.vector.y+1; j++) {
-			if(typeof(this.grid[i][j]) === "Grass") {
+			if(typeof(this.area[i][j]) === "Grass") {
 				return new Vector(i,j);
 			}
 		}
@@ -86,7 +92,7 @@ Herbivores.prototype.findSpace = function() {
 	var mass = [];
 	for(var i=this.vector.x-1; i < this.vector.x+1; i++) {
 		for(var j=this.vector.y-1; j < this.vector.y+1; j++) {
-			if(grid[i][j] === null) {
+			if(this.area[i][j] === null) {
 				mass.push(new Vector(i,j));
 			}
 
@@ -106,11 +112,40 @@ function randomElement(array) {
 function Stone() {
 	this.symbol = "#";
 }
+Stone.prototype.makeAction = function () {
+}
 
 function Grass() {
 	this.symbol = "*";
 }
-
+Grass.prototype.makeAction = function () {
+}
+function View(grid) {
+	this.grid = grid;
+}
+View.prototype.getArea = function(vector) {
+	var miniMass = new Array();
+	for(var i=this.vector.x-1; i < this.vector.x+1; i++) {
+		miniMass[i]=[];
+		for(var j=this.vector.y-1; j < this.vector.y+1; j++) {
+			miniMass[i].push(this.grid[i][j]);
+		}
+	}
+			return miniMass;
+}
+View.prototype.setAreaHerbivores = function(miniMass, herbivores) {
+	herbivores.area(miniMass);  
+}
+View.prototype.setArea = function() {
+	for(var i=0 ; i < this.grid.length; i++) {
+		for(var j=0; j < this.grid[0].length; j++){
+			if(typeof(this.grid[i][j]) === "Herbivores") {
+				var miniMass = getArea(this.grid[i][j].vector);
+				setArea(miniMass, this.grid[i][j]);
+			}
+		}
+	}
+}
 function createGrid(grid) {
 	var arrayGrid = new Array();
 	for(var i=0 ; i < grid.length; i++) {
