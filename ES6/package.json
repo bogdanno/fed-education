@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "babel src -d dist --presets es2015",
-    "watch": "babel src -d dist --presets es2015 -w"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,6 +15,10 @@
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-export": "^2.2.0",
-    "gulp-import": "0.0.1"
+    "gulp-import": "0.0.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

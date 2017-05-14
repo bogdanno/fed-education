@@ -1,15 +1,4 @@
-//npm run watch
-
-// class Animal {
-// 	constructor(age) {
-// 		this.age = age;
-// 	}
-
-// 	getAge () {
-// 		console.log(this.age);
-// 	}
-// }
-import { Animal } from './import.js';
+import {Animal} from './import.js';
 
 class Person extends Animal {
 	constructor(firstName,lastName,age,gender) {

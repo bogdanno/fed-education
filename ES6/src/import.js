@@ -1,4 +1,4 @@
-export const class Animal {
+class Animal {
 	constructor(age) {
 		this.age = age;
 	}
@@ -8,4 +8,4 @@ export const class Animal {
 	}
 }
 
-// export default An;
+export {Animal};
