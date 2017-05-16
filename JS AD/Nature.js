@@ -12,10 +12,10 @@ Nature.prototype.energyAnimal = function() {
 			// console.log(mass[i][j]);
 			if (mass[i][j] !== null) {
 			if(mass[i][j].name == "Herbivores") {
-				mass[i][j].energy = 0.4;
+				mass[i][j].energy = 1;
 			}
 			else if(mass[i][j].name == "Grass") {
-				mass[i][j].energy = 0.2;
+				mass[i][j].energy = 0.4;
 			}
 			}
 		}

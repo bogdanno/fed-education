@@ -6,10 +6,6 @@ function Herbivores(x, y) {
 }
 Herbivores.prototype = Object.create(Nature.prototype);
 
-// Herbivores.prototype.findStepAnimal = function() {
-// 	var coordinates = Find.findCoordinates("Grass", this.vector);
-// 	this.stepHerbivores(coordinates);
-// }
 Herbivores.prototype.makeAction = function() {
 	var coordinates = Find.findCoordinatesGrass("Grass", this.vector);
 	if (coordinates == null) {
@@ -40,10 +36,13 @@ Herbivores.prototype.newMass = function(mass, coordinates) {
 } 
 
 Herbivores.prototype.colorAnimalifEatGrass = function() {
-			if(this.energy > 1) {
+			if(this.energy > 5) {
 				this.color = "red";
+				// if(this.energy > 80) {
+				// 	this.animalBorn();
+				// }
 			}
-			else if(this.energy < 1 && this.energy > 0.1){
+			else if(this.energy < 5 && this.energy > 1){
 				this.color = "green";
 			}
 }
@@ -51,9 +50,21 @@ Herbivores.prototype.colorAnimalifEatGrass = function() {
 Herbivores.prototype.colorAnimalifEatSpace = function() {
 			if(this.energy < 0.1) {
 				this.color = "blue";
+				this.animalDied();
 			}
-			else if (this.energy < 1 && this.energy > 0.1){
+			else if (this.energy < 5 && this.energy > 1){
 				this.color = "green";
 			}
 }
 
+Herbivores.prototype.animalDied = function() {
+	mass[this.vector.x][this.vector.y] = new Space(this.vector.x,this.vector.y);
+	return mass;
+}
+
+// Herbivores.prototype.animalBorn = function(massSpace) {
+// 	if(massSpace.length !== 0) {
+// 	return massSpace[Math.floor(Math.random() * massSpace.length)].vector;
+// }
+// 	return mass;
+// }

@@ -3,10 +3,9 @@ var mass;
 function World(grid) {
 	var massGrid = massObj(grid);
 	mass = massGrid;
-	//var nature = new Nature(massGrid);
 	var energy = new Nature(massGrid);
 	var find = new Find(massGrid);
-	 this.start();
+	this.start();
 	//console.log(massGrid);
 }
 
@@ -22,7 +21,7 @@ World.prototype.start = function() {
 			var energyGrass = Nature.energyOneGrass(randomSpace);
 			printShow(mass);
 			}
-	}, 100);
+	}, 200);
 	}
 
 
