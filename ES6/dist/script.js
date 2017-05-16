@@ -1,103 +1,55 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Animal = function () {
-	function Animal(age) {
-		_classCallCheck(this, Animal);
-
-		this.age = age;
-	}
-
-	_createClass(Animal, [{
-		key: "getAge",
-		value: function getAge() {
-			console.log(this.age);
-		}
-	}]);
-
-	return Animal;
-}();
-
-exports.Animal = Animal;
-
-},{}],2:[function(require,module,exports){
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+function makeCharIterator(a) {
+	var str = a;
+	var arr = str.split('');
+}
 
-var _import = require('./import.js');
+var iterator = makeCharIterator('some');
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+try {
+	for (var _iterator = iterator[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+		var info = _step.value;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Person = function (_Animal) {
-	_inherits(Person, _Animal);
-
-	function Person(firstName, lastName, age, gender) {
-		_classCallCheck(this, Person);
-
-		var _this = _possibleConstructorReturn(this, (Person.__proto__ || Object.getPrototypeOf(Person)).call(this, age));
-
-		_this.firstName = firstName;
-		_this.lastName = lastName;
-		_this.gender = gender;
-		return _this;
+		console.log(info); // {char: 's'}
 	}
-
-	_createClass(Person, [{
-		key: 'getFirstName',
-		value: function getFirstName() {
-			console.log(this.firstName);
+} catch (err) {
+	_didIteratorError = true;
+	_iteratorError = err;
+} finally {
+	try {
+		if (!_iteratorNormalCompletion && _iterator.return) {
+			_iterator.return();
 		}
-	}, {
-		key: 'getLastName',
-		value: function getLastName() {
-			console.log(this.lastName);
+	} finally {
+		if (_didIteratorError) {
+			throw _iteratorError;
 		}
-	}, {
-		key: 'getGender',
-		value: function getGender() {
-			console.log(this.gender);
-		}
-	}], [{
-		key: 'MALE',
-		get: function get() {
-			var n = 'male';
-			return n;
-		}
-	}, {
-		key: 'FEMALE',
-		get: function get() {
-			var n = 'female';
-			return n;
-		}
-	}]);
+	}
+}
 
-	return Person;
-}(_import.Animal);
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
 
-var monkey = new _import.Animal(5);
-monkey.getAge(); // => 5
-var petr = new Person('Petr', 'Petrov', 20, Person.MALE);
-petr.getAge(); // => 20
-petr.getFirstName() + petr.getLastName(); // => Petr Petrov
-petr.getGender() === Person.MALE ? 'male' : 'female'; // => male
+// let str = "some";
+// let arr = str.split('');
+// for(let number of arr) {
+// 	console.log(number);
+// }
+// let iterator = arr[Symbol.iterator]();
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
 
-
-console.log(monkey);
-console.log(petr);
-
-},{"./import.js":1}]},{},[2])
+},{}]},{},[1])
 
 //# sourceMappingURL=dist/script.js.map

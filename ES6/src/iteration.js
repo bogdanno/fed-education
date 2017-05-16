@@ -1,12 +1,34 @@
+function makeCharIterator(a) {
+	let str = a;
+	let i =0;
+	//let arr = str.split("");
+	//let iterator = arr[Symbol.iterator];
+	return {
+		[Symbol.iterator]: () => ({
+			next: () => {
+				return i < str.length ? {
+					value: {
+						char: str[i++]
+					},
+					done:false
+				} : {
+					done: true
+				};
+			}
+		})
+	};
+}
 
-	let str = "some";
-	let arr = str.split('');
-	for(let number of arr) {
-		console.log(number);
-	}
-	let iterator = arr[Symbol.iterator]();
-	console.log(iterator.next());
-	console.log(iterator.next());
-	console.log(iterator.next());
-	console.log(iterator.next());
-	console.log(iterator.next());
+let iterator = makeCharIterator('some');
+
+for(let info of iterator) {
+ console.log(info); // {char: 's'}
+}
+
+
+let iterator2 = makeCharIterator('some')[Symbol.iterator]();
+console.log(iterator2.next());
+console.log(iterator2.next());
+console.log(iterator2.next());
+console.log(iterator2.next());
+console.log(iterator2.next());
