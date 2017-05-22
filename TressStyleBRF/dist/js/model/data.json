@@ -1,0 +1,74 @@
+{
+	"blocks" : [
+		{
+			"link": "category.html ",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)"
+		},
+		{
+			"link": "category.html",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)" 
+		},
+		{
+			"link": "category.html",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)" 
+		},
+		{
+			"link": "category.html ",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)" 
+		},
+		{
+			"link": "category.html ",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)" 
+		},
+		{
+			"link": "category.html ",
+			"img" : "img/vaza.jpg",
+			"title": "вазы и флористика",
+			"number": "(456)" 
+		}
+		
+	],
+	"category" : [
+		{
+			"img" : "img/category/lamp2.jpg",
+			"title": "подвес CREMA",
+			"cost": "6 789 ₽" 
+		},
+		{
+			"img" : "img/category/lamp.jpg",
+			"title": "подвес SUSPENSION",
+			"cost": "6 789 ₽"
+		},
+		{
+			"img" : "img/category/lamp2.jpg",
+			"title": "подвес CREMA",
+			"cost": "6 789 ₽" 
+		},
+		{
+			"img" : "img/category/lamp.jpg",
+			"title": "подвес SUSPENSION",
+			"cost": "6 789 ₽"
+		},
+		{
+			"img" : "img/category/lamp2.jpg",
+			"title": "подвес CREMA",
+			"cost": "6 789 ₽" 
+		},
+		{
+			"img" : "img/category/lamp.jpg",
+			"title": "подвес SUSPENSION",
+			"cost": "6 789 ₽"
+		}
+	]
+
+}

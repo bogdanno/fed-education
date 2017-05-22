@@ -1,0 +1,359 @@
+//import
+@import 'category.sass';
+@import 'flexbox.sass';
+
+// colors
+$standart-color: #755846;
+$backgr-popup: #FFF4E1;
+$white: #fff;
+
+
+// fonts
+$serif:  Georgia, "Lora", "Playfair Display", serif;
+$sans-serif: "Roboto", "Source Sans Pro", "Open Sans", Arial, sans-serif;
+$monospace: "Inconsolata", monospace;
+$size: 14px;
+
+body 
+    font-size: $size
+    margin: 0
+    font-family: $sans-serif,$serif,$monospace
+
+header,section,main
+    min-width: 73%
+
+a:active
+    color: lightgray
+
+.icon 
+    width: 30px
+
+.search-form 
+    margin: 20px 0 0 90px
+
+.container 
+    width: 70%
+    margin-right: auto
+    margin-left: auto
+    padding-left: 15px
+    padding-right: 15px
+
+.img-logo 
+    width: 25%
+    margin: 0 auto
+
+.nav 
+    margin-right: 60px
+
+.logo 
+    width: 100%
+    height: auto
+
+.navigation
+    height: 50px
+
+    &__navigation-link 
+        list-style-type: none
+        float: right
+        padding: 10px
+    
+        &__nav-a 
+            text-decoration: none
+
+.navigation-link
+
+    &__icon-abbr
+        margin-right: 15px 
+        &:hover
+            &::after
+                content: attr(data-title)
+                position: absolute
+                z-index: 10
+                font-size: 10px
+                text-transform: uppercase
+                text-align: center
+
+
+.interier 
+        position: absolute
+        display: none
+
+.section
+    &__container
+        width: 100%
+
+.container
+    &__navigation
+        width: 100%
+        padding: 0 
+        height: 30px
+
+
+.navigation
+    &__link
+        &:nth-child(-n+6)
+        text-align: center
+        list-style-type: none
+         
+.link
+    &__a-category 
+        display: block
+        padding: 5px
+        margin-left: 0 !important
+        text-decoration: none
+        text-transform: uppercase
+
+        &:hover 
+            color: $standart-color
+                
+            
+    &:hover 
+        .interier
+            z-index: 15
+            padding: 5px
+            display: block
+            width: 210px
+            background-color: $white
+
+            li
+                width: 200px
+                float: left
+                list-style-type: none
+                padding: 5px
+                text-align: left
+
+                a
+                    display: block
+                    margin-left: 0 !important
+
+                    &:hover 
+                        color: $standart-color
+                        
+.min-nav
+    position: absolute
+    display: none
+
+.block-hover-min 
+     &:hover 
+        .min-nav
+            z-index: 20
+            margin-left: 160px
+            padding: 5px
+            display: block
+            width: 210px
+            background-color: lightgray
+
+            li
+                width: 200px
+                float: left
+                list-style-type: none
+                padding: 5px
+                text-align: left
+
+                a
+                    display: block
+                    margin-left: 0 !important
+
+                    &:hover 
+                        color: $standart-color
+
+ 
+
+hr 
+    border: none
+    background-color: gray
+    color: gray
+    height: 2px
+
+.category-block
+    display: block
+    height: auto
+    
+ 
+.op 
+    float:  left
+
+.border-block
+    display: inline-block
+    border: 1px solid gray
+    width: 280px
+    height: 290px
+    margin: 20px 0 0 30px
+
+    a
+        text-decoration: none
+
+        .text-block
+                color: $standart-color
+
+.opacity 
+    opacity: 0.8
+
+    &:hover 
+        opacity: 1
+
+.block-post
+    
+    padding: 10px 0 0 10px
+    height: 200px
+    width: 260px  
+
+.block-img
+    height: 200px
+    width: 260px
+
+.text-block 
+    color: gray
+    text-align: center
+
+    &__uppercase
+        text-transform: uppercase
+
+.footer
+    width: 100%
+    height: 30px
+    margin: 30px 0 0 0
+    border: 1px gray solid
+    text-align: center
+
+    &__uppercase
+        text-transform: uppercase
+
+.window 
+    display: none
+    width: 100%
+    min-height: 100%
+    background-color: rgba(0,0,0,0.7)
+    overflow: hidden
+    position: fixed
+    top: 0px 
+    z-index: 100
+    font-family: Arial
+    left: 0
+
+.popup-block
+    border: 1px solid $white
+    width: 30%
+    height: 320px
+    //margin: 30px 0 0 30px
+
+    &__cancel 
+        float: right
+        cursor: pointer
+        color: $white
+        margin-right: 30%
+
+        &:hover 
+            background-color: $white
+            color: $standart-color
+
+    &__ok
+        float: left
+        cursor: pointer
+        color: $white
+        margin-left: 30%
+
+        &:hover 
+            background-color: $white
+            color: $standart-color 
+
+.popup 
+    width: 100%
+    height: 250px
+    margin: 20px 0 0 0px
+    background-color: $white
+    // box-shadow: 0px 0px 10px #000;
+
+    &__authorization
+        //width: 70%
+        height: 30px
+        text-align: center
+        text-transform: uppercase
+
+    &__authorization-form
+        //width: 70%
+        display: flex
+        justify-content: center
+        flex-flow: column wrap
+        margin-bottom: 10px
+
+.authorization-form
+    &__user
+        border: 1px solid $standart-color
+        height: 30px
+
+    &__pass
+        border: 1px solid $standart-color
+        height: 30px
+
+.close
+    float: right
+    top: 0px
+    cursor: pointer 
+
+.flex-container 
+    padding: 10px
+    background: #fff
+
+@media screen and (min-width: 963px) and (max-width: 1229px)
+    .img-logo
+        margin: 0
+    .search-form
+        display: none
+    .nav 
+        margin-top: 20px;
+    .link__a-category
+        padding-left: 10px;
+
+@media screen and (min-width: 963px)
+    .home
+        display: none
+    .search
+        display: none
+    
+@media screen and (max-width: 963px)
+    .popup-block
+        width: 40%
+    .search-form
+        display: none
+    .flexbox
+        flex-direction: column
+    .img-logo
+        display: none
+    .nav 
+        margin-right: 0px
+    .container__navigation 
+        padding: 0
+        height: 50px;
+
+@media screen and (min-width: 320px) and  (max-width: 560px)
+    .container__navigation 
+        padding: 0
+        height: auto
+    .border-block
+        margin: 0 0 20px 0
+    .navigation__navigation-link
+        padding: 5px;
+    .nav 
+        margin-right: 0px
+        height: auto
+    .navigation
+        padding: 0
+    .popup-block
+        width: 80%
+    .aside 
+        width: auto
+    .list-two
+        display: -webkit-flex
+        display: flex
+        flex-direction: row
+        flex-flow: row wrap
+        justify-content: center
+        -webkit-justify-content: center
+        align-items: center
+    .list-navigation-two
+        margin-right: 20px
+    .container-cards
+        width: 100%
+
+
