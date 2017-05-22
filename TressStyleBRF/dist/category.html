@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TreesStyle</title>
     <link rel="stylesheet" type="text/css" href="css/all.css">
+    <script defer src = "js/handlebars.js"> </script>
+    <script src = "js/categoryHBS.js"> </script>
 </head>
 
 <body class="page">
@@ -175,43 +177,35 @@
     </section>
 </footer>
 
- <script>
-    function show(state) {
-    document.getElementById('box').style.display = state;
-    document.getElementById('box-two').style.display = state;
-}
-</script>
-<script src = "js/handlebars.js"> </script>
-<script src = "js/categoryHBS.js"> </script>
-
+<script src = "js/popup.js"></script>
  <script id = "category" type="text/x-handlebars-template">
  <div class="flex-container">
     <div class="h2"><h2>ОСВЕЩЕНИЕ ДОМА</h2></div>
         {{#each category}}
             <div class="flex-element">
-                        <div class="op">
-                            <div class="border-block">
-                                <a href="">
-                                    <div class="opacity">
-                                
-                                    <div class="block-post">
-                                        <img class="block-img" src="{{img}}">
-                                    </div>
-                                    <div class="text-block">
-                                        <p class="p">{{title}}</p>
-                                    <div class="icon-price">
-                                        <b>{{cost}}</b>
-                                    </div>
-                                    <div class="icon-buy">
-                                        <img class="icon-b-i" src="img/icon/put-inside-the-cart.png">
-                                    </div>
-                                    </div>
-                                    </div>
-                                </a>
-                            </div>
+            <div class="op">
+                <div class="border-block">
+                    <a href="">
+                        <div class="opacity">
+                    
+                        <div class="block-post">
+                            <img class="block-img" src="{{img}}">
                         </div>
-                    </div>
-        {{/each}}
+                        <div class="text-block">
+                            <p class="p">{{title}}</p>
+                        <div class="icon-price">
+                            <b>{{cost}}</b>
+                        </div>
+                        <div class="icon-buy">
+                            <img class="icon-b-i" src="img/icon/put-inside-the-cart.png">
+                        </div>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
  </div>
 </script>
 </body>
