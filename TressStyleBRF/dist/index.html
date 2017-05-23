@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <script defer src = "js/handlebars.js"> </script>
     <script defer src = "js/main.js"> </script>
+    <script defer src = "js/show.js"></script>
+    <script defer src = "js/presenter.js"></script>
 </head>
 
 <body class="page">
@@ -140,28 +142,10 @@
 
 <section>
     <div class="container">
-         <div class="category-block" id="category-blocks"></div>
+         <div class="category-block" id="blocksItem"></div>
     </div>
 </section> 
-
-</main>
- <footer> 
-    <section class="container">
-        <div class="footer">
-            <div class="footer__elements">
-                <p class="footer__uppercase">лиза богданова</p>
-            </div>
-            <div class="footer__elements">
-                <p class="footer__uppercase">@</p>
-            </div>
-            <div class="footer__elements">
-                <p class="footer__uppercase">ЭПАМ</p>
-            </div>
-        </div>
-    </section>
-</footer>
-<script src = "js/popup.js"></script>
- <script id = "blocks" type="text/x-handlebars-template">
+<script id = "blocks" type="text/x-handlebars-template">
     <div class="flex-container">
         {{#each blocks}}
             <div class="flex-element">
@@ -182,6 +166,22 @@
         {{/each}}
     </div>
 </script>
+</main>
+ <footer> 
+    <section class="container">
+        <div class="footer">
+            <div class="footer__elements">
+                <p class="footer__uppercase">лиза богданова</p>
+            </div>
+            <div class="footer__elements">
+                <p class="footer__uppercase">@</p>
+            </div>
+            <div class="footer__elements">
+                <p class="footer__uppercase">ЭПАМ</p>
+            </div>
+        </div>
+    </section>
+</footer>
 
 </body>
 </html>

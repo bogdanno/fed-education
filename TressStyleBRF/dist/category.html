@@ -8,7 +8,9 @@
     <title>TreesStyle</title>
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <script defer src = "js/handlebars.js"> </script>
-    <script src = "js/categoryHBS.js"> </script>
+    <script defer src = "js/categoryHBS.js"> </script>
+    <script defer src = "js/presenter.js"></script>
+    <script defer src = "js/show.js"></script>
 </head>
 
 <body class="page">
@@ -166,7 +168,7 @@
     </ul>
   </aside>
     <section>
-        <div class="container-cards" id="category-cards"></div>
+        <div class="container-cards" id="blocksItem"></div>
    </section> 
 </main>
  <footer> 
@@ -176,36 +178,34 @@
         </div>
     </section>
 </footer>
-
-<script src = "js/popup.js"></script>
  <script id = "category" type="text/x-handlebars-template">
  <div class="flex-container">
     <div class="h2"><h2>ОСВЕЩЕНИЕ ДОМА</h2></div>
         {{#each category}}
             <div class="flex-element">
-            <div class="op">
-                <div class="border-block">
-                    <a href="">
-                        <div class="opacity">
-                    
-                        <div class="block-post">
-                            <img class="block-img" src="{{img}}">
+                        <div class="op">
+                            <div class="border-block">
+                                <a href="">
+                                    <div class="opacity">
+                                
+                                    <div class="block-post">
+                                        <img class="block-img" src="{{img}}">
+                                    </div>
+                                    <div class="text-block">
+                                        <p class="p">{{title}}</p>
+                                    <div class="icon-price">
+                                        <b>{{cost}}</b>
+                                    </div>
+                                    <div class="icon-buy">
+                                        <img class="icon-b-i" src="img/icon/put-inside-the-cart.png">
+                                    </div>
+                                    </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="text-block">
-                            <p class="p">{{title}}</p>
-                        <div class="icon-price">
-                            <b>{{cost}}</b>
-                        </div>
-                        <div class="icon-buy">
-                            <img class="icon-b-i" src="img/icon/put-inside-the-cart.png">
-                        </div>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    {{/each}}
+                    </div>
+        {{/each}}
  </div>
 </script>
 </body>
