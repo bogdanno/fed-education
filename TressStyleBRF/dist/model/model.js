@@ -1,11 +1,5 @@
 function Model() {
 	this.model;
-	this.get("../model/data.json")
-	.then(function(json) {
-		return console.log(json);
-	}, function(error) {
-		return console.log(error);
-	});
 }
 
 Model.prototype.get = function(url) {
