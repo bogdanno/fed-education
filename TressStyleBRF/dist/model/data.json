@@ -42,32 +42,38 @@
 		{
 			"img" : "img/category/lamp2.jpg",
 			"title": "подвес CREMA",
-			"cost": "6 789 ₽" 
+			"cost": "6 789 ₽",
+			"number": 1
 		},
 		{
 			"img" : "img/category/lamp.jpg",
 			"title": "подвес SUSPENSION",
-			"cost": "6 789 ₽"
+			"cost": "6 789 ₽",
+			"number": 2
 		},
 		{
 			"img" : "img/category/lamp2.jpg",
 			"title": "подвес CREMA",
-			"cost": "6 789 ₽" 
+			"cost": "6 789 ₽",
+			"number": 3 
 		},
 		{
 			"img" : "img/category/lamp.jpg",
 			"title": "подвес SUSPENSION",
-			"cost": "6 789 ₽"
+			"cost": "6 789 ₽",
+			"number": 4
 		},
 		{
 			"img" : "img/category/lamp2.jpg",
 			"title": "подвес CREMA",
-			"cost": "6 789 ₽" 
+			"cost": "6 789 ₽",
+			"number": 5 
 		},
 		{
 			"img" : "img/category/lamp.jpg",
 			"title": "подвес SUSPENSION",
-			"cost": "6 789 ₽"
+			"cost": "6 789 ₽",
+			"number": 6
 		}
 	]
 

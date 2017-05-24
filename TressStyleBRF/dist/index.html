@@ -7,10 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TreesStyle</title>
     <link rel="stylesheet" type="text/css" href="css/all.css">
-    <script defer src = "js/handlebars.js"> </script>
-    <script defer src = "js/main.js"> </script>
-    <script defer src = "js/show.js"></script>
-    <script defer src = "js/presenter.js"></script>
+    
 </head>
 
 <body class="page">
@@ -145,27 +142,6 @@
          <div class="category-block" id="blocksItem"></div>
     </div>
 </section> 
-<script id = "blocks" type="text/x-handlebars-template">
-    <div class="flex-container">
-        {{#each blocks}}
-            <div class="flex-element">
-                <div class="border-block">
-                    <a href="{{link}}">
-                        <div class="opacity">
-                            <div class="block-post">
-                               <img class="block-img" src="{{img}}">
-                            </div>
-                            <div class="text-block">
-                                <p class="text-block__uppercase">{{title}}</p>
-                                <p>{{number}}</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        {{/each}}
-    </div>
-</script>
 </main>
  <footer> 
     <section class="container">
@@ -182,6 +158,32 @@
         </div>
     </section>
 </footer>
+    <script src = "js/handlebars.js"> </script>
+    <script src = "model/model.js"> </script>
+    <script src = "js/view.js"> </script>
+    <script src = "js/show.js"></script>
+    <script src = "js/presenter.js"></script>
 
+    <script id = "blocks" type="text/x-handlebars-template">
+            <div class="flex-container">
+                {{#each blocks}}
+                    <div class="flex-element">
+                        <div class="border-block">
+                            <a href="{{link}}">
+                                <div class="opacity">
+                                    <div class="block-post">
+                                       <img class="block-img" src="{{img}}">
+                                    </div>
+                                    <div class="text-block">
+                                        <p class="text-block__uppercase">{{title}}</p>
+                                        <p>{{number}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+    </script>
 </body>
 </html>

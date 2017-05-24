@@ -1,12 +1,21 @@
-
-function initData(blocks, json) {
-    var compile = Handlebars.compile(blocks);
-	var result = compile(json);
-    getPaint(result);
+function Presenter() {
+	var view;
+	var model;
+	this.get();
+	this.view(model);
 }
+Presenter.prototype.get = function() {
+	model = new Model();
+//	console.log(model);
+};
 
-function getPaint(result) {
-    var content = document.getElementById('blocksItem');
-	content.innerHTML = result; 
-   
-}
+Presenter.prototype.view = function(model) {
+	view = new View(model);
+//	console.log(view);
+};
+
+var present = new Presenter();
+
+// Model(function(){
+// 	console.log(this);
+// });
